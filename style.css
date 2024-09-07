@@ -1,0 +1,265 @@
+/* Importa a fonte Merriweather do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather", serif;
+}
+
+body{
+    background-color: #f5dade;
+}
+
+/* ------------------------------------------------------------- */
+/*barra lateral */
+
+.filtros {
+    display: flex;
+    width: 17%;
+    height: 100%;
+    background-color: #252525;
+    padding: 40px 0 40px 1%;
+    flex-direction: column;
+    box-shadow: 3px 0 0 #7c3042;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* Estiliza a div que guarda o ícone*/
+.botao-expandir{
+    width: 100%;
+    padding-left: 1rem;
+}
+
+/* Estiliza o ícone */
+.botao-expandir > i{
+    color:#F5F7F8;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Estiliza a lista */
+.botoes-filtro{
+    height: 100%;
+    list-style-type: none;
+    padding-right: 1rem;
+}
+
+/* Estiliza os itens da lista */
+.item-filtro {
+    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1.5rem; /* Borda arredondada */
+    background-color: #7c3042; /* Cor de fundo do botão */
+    color: #F5F7F8; /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.itens-filtro:hover{
+    background-color: #b25b6e; /* Muda a cor de fundo ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+}
+
+/* ------------------------------------------------------------- */
+/*conteudo principal */
+
+.conteudo{
+    width: 85%;
+    align-items: center;
+    position: fixed;
+    left: 15.2%;
+    top: 0;
+    height: 100%;
+    background-color: transparent;
+}
+
+.texto-titulo{
+    padding-bottom: 0.5rem;
+    padding-top: 0.5rem;
+    position: relative;
+}
+
+h1 {
+    font-size: 3rem; /* Tamanho da fonte */
+    color: #940524; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    letter-spacing: 0.4rem; /* Espaçamento entre letras */
+}
+
+/* Estiliza as divs */
+div {
+    width: 21rem;
+    align-items: center;
+    padding-top: 0.8rem;
+}
+
+/* Estiliza a seção de campos de busca */
+.campos-busca {
+    flex-direction: row; /* Alinha os itens na vertical */
+    align-items: center;
+    width: 85%;
+    padding-left: 30%;
+    position: relative;
+    display: flex; /* Usa Flexbox para layout */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    margin-bottom: 1rem; /* Espaçamento abaixo de cada seção */
+}
+
+/* Estiliza os inputs dentro das seções */
+.campos-busca input {
+    width: 100%; /* Largura dos inputs */
+    border: none; /* Remove a borda padrão */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 1.5rem; /* Borda arredondada */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos inputs */
+    color: #45474B; /* Cor do texto */
+    font-size: 1rem; /* Tamanho da fonte */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+}
+
+
+/* Estiliza os botões dentro das seções */
+section button {
+    padding: 0.8rem 1.2rem; /* Espaçamento interno do botão */
+    border: none; /* Remove a borda padrão */
+    border-radius: 1.5rem; /* Borda arredondada */
+    background-color: #79011b; /* Cor de fundo do botão */
+    color: #F5F7F8; /* Cor do texto do botão */
+    font-size: 1rem; /* Tamanho da fonte */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    margin-left: 1rem;
+}
+
+/* Adiciona efeito hover ao botão de pesquisa */
+section button:hover {
+    background-color: #b25b6e; /* Muda a cor de fundo ao passar o mouse */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adiciona uma sombra mais intensa */
+}
+
+/* ------------------------------------------------------------- */
+/*conteudo resultados */
+
+/* Estiliza a caixa de resultados da pesquisa */
+.resultados-pesquisa {
+    padding-left: 15.2%;
+    position: relative;
+    left: 15%;
+    width: 100%; /* Largura máxima da caixa de resultados */
+    height: 70%; /* Altura máxima da caixa de resultados */
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+    padding: 1rem; /* Espaçamento interno */
+    border-radius: 0.6rem; /* Borda arredondada */
+    align-self: center;
+}
+
+/* Estiliza cada item de resultado */
+.item-resultado {
+    background: #fcfbfb; /* Cor de fundo dos itens */
+    border-radius: 0.6rem; /* Borda arredondada */
+    padding: 1rem; /* Espaçamento interno */
+    margin-bottom: 1rem; /* Espaçamento abaixo dos itens */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+    width: 70%;
+}
+
+.item-resultado:hover{
+    background-color: #ebe7e7;
+}
+
+/* Estiliza os títulos dentro dos itens de resultado */
+.item-resultado h2 {
+    font-size: 1.5rem; /* Tamanho da fonte */
+    color: #6d6c6c; /* Cor do texto */
+}
+
+/* Estiliza os links dentro dos itens de resultado */
+.item-resultado a {
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+    color: #79011b; /* Cor do texto dos links */
+}
+
+/* Estiliza os links quando são passados o mouse sobre */
+.item-resultado a:hover {
+    text-decoration: underline; /* Adiciona sublinhado ao passar o mouse */
+}
+
+/* Estiliza a descrição meta dentro dos itens de resultado */
+.descricao-meta {
+    color: #45474B; /* Cor do texto */
+    margin: 0.5rem 0; /* Margem acima e abaixo */
+}
+
+.item-resultado p{
+    word-break: break-all;
+}
+
+/* Estiliza o rodapé da página */
+footer {
+    background-color: #eca1ac; /* Cor de fundo do rodapé */
+    color: #2e2e2e; /* Cor do texto */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 0; /* Espaçamento interno */
+    width: 100%; /* Largura total da página */
+    position: absolute; /* Posiciona o rodapé */
+    bottom: 0; /* Alinha ao fundo da página */
+    font-size: 0.7rem; /* Tamanho da fonte */
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem; /* Tamanho da fonte em telas menores */
+        letter-spacing: 0.2rem; /* Espaçamento entre letras em telas menores */
+    }
+
+    section input {
+        width: 25rem; /* Largura dos inputs em telas menores */
+        padding: 0.8rem; /* Espaçamento interno em telas menores */
+    }
+
+    .resultados-pesquisa {
+        width: 40rem; /* Largura da caixa de resultados em telas menores */
+        height: 40vh; /* Altura da caixa de resultados em telas menores */
+    }
+
+    .item-resultado h2 {
+        font-size: 1.3rem; /* Tamanho da fonte dos títulos em telas menores */
+    }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+
+    h1 {
+        font-size: 1.8rem; /* Tamanho da fonte em telas pequenas */
+        letter-spacing: 0.1rem; /* Espaçamento entre letras em telas pequenas */
+    }
+
+    section input {
+        width: 17rem; /* Largura total dos inputs em telas pequenas */
+    }
+
+    section button {
+        padding: 0.6rem 1rem; /* Espaçamento interno do botão em telas pequenas */
+        font-size: 0.9rem; /* Tamanho da fonte do botão em telas pequenas */
+    }
+
+    .resultados-pesquisa {
+        width: 90%; /* Largura da caixa de resultados em telas pequenas */
+        height: 50vh; /* Altura da caixa de resultados em telas pequenas */
+    }
+
+    .item-resultado h2 {
+        font-size: 1.1rem; /* Tamanho da fonte dos títulos em telas pequenas */
+    }
+
+    footer {
+        font-size: 0.5rem; /* Tamanho da fonte do rodapé em telas pequenas */
+    }
+}
