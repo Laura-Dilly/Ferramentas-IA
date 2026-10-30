@@ -40,3 +40,4 @@ Este arquivo reúne os dados das Inteligências Artificiais que serão exibidos.
 
 ### 4. `style.css`
 Este arquivo é responsável por estilizar a página HTML.
+- [Vivify](https://vivify.video/realtime-face-swap) - Real-time AI face swap, try-on, and restyle on webcam video.
